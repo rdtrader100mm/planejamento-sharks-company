@@ -128,41 +128,68 @@ const renderSlideContent = (slide) => {
                 </div>
             );
 
-        case 'diagnosis':
+        case 'project-objectives':
             return (
-                <div className="slide slide-diagnosis">
+                <div className="slide slide-objectives">
                     <div className="slide-header">
                         <h2 className="section-title">{slide.title}</h2>
                         <p className="section-subtitle">{slide.subtitle}</p>
                     </div>
-                    <div className="diagnosis-comparison">
-                        <div className="diagnosis-column before">
-                            <div className="column-header">
-                                <span className="column-icon">❌</span>
-                                <span className="column-label">Antes</span>
+                    <div className="objectives-grid">
+                        {slide.items.map((item, idx) => (
+                            <div key={idx} className="objective-card">
+                                <span className="objective-icon">{item.icon}</span>
+                                <h3 className="objective-title">{item.title}</h3>
+                                <p className="objective-desc">{item.desc}</p>
                             </div>
-                            <ul className="diagnosis-list">
-                                {slide.before.map((item, idx) => (
-                                    <li key={idx}>{item}</li>
-                                ))}
-                            </ul>
+                        ))}
+                    </div>
+                </div>
+            );
+
+        case 'market-regional':
+            return (
+                <div className="slide slide-market-regional">
+                    <div className="slide-header">
+                        <h2 className="section-title">{slide.title}</h2>
+                        <p className="section-subtitle">{slide.subtitle}</p>
+                    </div>
+                    <div className="regional-content">
+                        <div className="regional-bullets">
+                            {slide.bullets.map((bullet, idx) => (
+                                <div key={idx} className="regional-item">
+                                    <div className="regional-icon-wrapper">
+                                        <span className="regional-icon">{bullet.icon}</span>
+                                    </div>
+                                    <p className="regional-text">{bullet.text}</p>
+                                </div>
+                            ))}
                         </div>
-                        <div className="diagnosis-arrow">
-                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
-                                <path d="M10 30 L50 30 M40 20 L50 30 L40 40" stroke="var(--color-primary)" strokeWidth="3" strokeLinecap="round" />
-                            </svg>
-                        </div>
-                        <div className="diagnosis-column after">
-                            <div className="column-header">
-                                <span className="column-icon">✅</span>
-                                <span className="column-label">Depois</span>
+                    </div>
+                </div>
+            );
+
+        case 'implemented-grouped':
+            return (
+                <div className="slide slide-implemented-grouped">
+                    <div className="slide-header">
+                        <h2 className="section-title">{slide.title}</h2>
+                        <p className="section-subtitle">{slide.subtitle}</p>
+                    </div>
+                    <div className="grouped-grid">
+                        {slide.groups.map((group, idx) => (
+                            <div key={idx} className="group-col" style={{ borderTop: `4px solid ${group.color}` }}>
+                                <h3 className="group-title" style={{ color: group.color }}>{group.title}</h3>
+                                <div className="group-list">
+                                    {group.items.map((item, i) => (
+                                        <div key={i} className="group-item done">
+                                            <span className="check-icon">✓</span>
+                                            <span className="item-text">{item}</span>
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
-                            <ul className="diagnosis-list">
-                                {slide.after.map((item, idx) => (
-                                    <li key={idx}>{item}</li>
-                                ))}
-                            </ul>
-                        </div>
+                        ))}
                     </div>
                 </div>
             );
@@ -210,44 +237,24 @@ const renderSlideContent = (slide) => {
                 </div>
             );
 
-        case 'implemented':
+        case 'roadmap-layered':
             return (
-                <div className="slide slide-implemented">
+                <div className="slide slide-roadmap-layered">
                     <div className="slide-header">
                         <h2 className="section-title">{slide.title}</h2>
                         <p className="section-subtitle">{slide.subtitle}</p>
                     </div>
-                    <div className="implemented-grid">
-                        {slide.items.map((item, idx) => (
-                            <div key={idx} className={`implemented-card ${item.status}`}>
-                                <span className="check-badge">✓</span>
-                                <span className="implemented-text">{item.text}</span>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            );
-
-        case 'roadmap-timeline':
-            return (
-                <div className="slide slide-roadmap">
-                    <div className="slide-header">
-                        <h2 className="section-title">{slide.title}</h2>
-                        <p className="section-subtitle">{slide.subtitle}</p>
-                    </div>
-                    <div className="timeline">
-                        <div className="timeline-line"></div>
-                        {slide.phases.map((phase, idx) => (
-                            <div key={idx} className="timeline-item">
-                                <div className="timeline-dot"></div>
-                                <div className="timeline-content">
-                                    <span className="timeline-phase">{phase.phase}</span>
-                                    <h3 className="timeline-title">{phase.title}</h3>
-                                    <ul className="timeline-tasks">
-                                        {phase.tasks.map((task, i) => (
-                                            <li key={i}>{task}</li>
-                                        ))}
-                                    </ul>
+                    <div className="roadmap-layers">
+                        {slide.layers.map((layer, idx) => (
+                            <div key={idx} className="roadmap-layer">
+                                <div className="layer-header">
+                                    <span className="layer-icon">{layer.icon}</span>
+                                    <span className="layer-name">{layer.category}</span>
+                                </div>
+                                <div className="layer-actions">
+                                    {layer.actions.map((action, i) => (
+                                        <div key={i} className="action-tag">{action}</div>
+                                    ))}
                                 </div>
                             </div>
                         ))}

@@ -1,150 +1,198 @@
-// Dados do RELATÓRIO EXECUTIVO DE MARKETING
-// Foco: Execução, Entregas e Próximos Passos
+// Dados do PLANO ESTRATÉGICO DE MARKETING
+// Foco: Realidade Operacional, Dados Regionais (PB/RN) e Ações Práticas
 
 export const slides = [
-    // SLIDE 1: CAPA EXECUTIVA
+    // 1. ABERTURA
     {
         id: 1,
         type: 'hero',
-        headline: 'Relatório Executivo de Marketing',
-        tagline: 'Status de Implementação & Planejamento Estratégico 2026',
-        logos: ['/logo-pbrnfoods.png', '/logo-sharks.png']
+        headline: 'Plano Estratégico de Marketing',
+        tagline: 'Expansão Digital & Consolidação Regional',
+        logos: ['/logo-pbrnfoods.png']
     },
 
-    // SLIDE 2: DIAGNÓSTICO (ANTES VS DEPOIS)
+    // 2. OBJETIVO DO PROJETO
     {
         id: 2,
-        type: 'diagnosis',
-        title: 'Evolução da Estrutura Comercial',
-        subtitle: 'Transformação do cenário operacional em ecossistema digital',
-        before: [
-            'Prospecção 100% manual e dependente de vendedores',
-            'Ausência de materiais de apoio padronizados',
-            'Baixa visibilidade da marca no digital',
-            'Controle de leads descentralizado'
-        ],
-        after: [
-            'Processo de captação digital estruturado',
-            'Kit de vendas e apresentação institucional prontos',
-            'Identidade visual modernizada e ativa',
-            'CRM e Funil de Vendas integrados'
-        ]
-    },
-
-    // SLIDE 3: O QUE JÁ FOI FEITO (ENTREGAS TANGÍVEIS)
-    {
-        id: 3,
-        type: 'implemented',
-        title: 'Status: Ações Concluídas',
-        subtitle: 'Entregas realizadas na fase de estruturação inicial',
+        type: 'project-objectives',
+        title: 'Objetivos Estratégicos',
+        subtitle: 'Focos principais da atuação de marketing',
         items: [
-            { text: 'Diagnóstico Comercial Completo', status: 'done' },
-            { text: 'Definição de ICP (Perfil de Cliente Ideal)', status: 'done' },
-            { text: 'Criação da Nova Identidade Visual', status: 'done' },
-            { text: 'Desenvolvimento do Mascote da Marca', status: 'done' },
-            { text: 'Estruturação do CRM de Vendas', status: 'done' },
-            { text: 'Produção de Apresentação Institucional', status: 'done' },
-            { text: 'Setup de Redes Sociais (Instagram/LinkedIn)', status: 'done' },
-            { text: 'Definição da Política Comercial', status: 'done' }
-        ]
-    },
-
-    // SLIDE 4: ESTRUTURA ATIVA (FUNIL)
-    {
-        id: 4,
-        type: 'funnel-modern',
-        title: 'Máquina de Vendas Ativa',
-        subtitle: 'Estrutura atual de captação e conversão de clientes',
-        stages: [
             {
-                name: 'ATRAÇÃO',
-                label: 'Tráfego & Prospecção',
-                color: '#FF5252',
-                items: ['Ads (Meta/Google)', 'Social Media', 'Prospecção Ativa']
+                icon: '🎯',
+                title: 'Organização Digital',
+                desc: 'Profissionalizar a presença da marca em todos os canais.'
             },
             {
-                name: 'NEGOCIAÇÃO',
-                label: 'Qualificação & Oferta',
-                color: '#D32F2F',
-                items: ['Qualificação (SDR)', 'Apresentação', 'Envio de Proposta']
+                icon: '⚡',
+                title: 'Geração de Leads',
+                desc: 'Criar fluxo constante de novos clientes potenciais.'
             },
             {
-                name: 'FECHAMENTO',
-                label: 'Conversão & Onboarding',
-                color: '#B71C1C',
-                items: ['Assinatura', 'Onboarding', 'Pós-Venda']
+                icon: '📍',
+                title: 'Posicionamento Regional',
+                desc: 'Consolidar liderança em PB e RN no setor alimentício.'
+            },
+            {
+                icon: '🤝',
+                title: 'Apoio a Vendas',
+                desc: 'Fornecer materiais e leads qualificados para o time comercial.'
             }
         ]
     },
 
-    // SLIDE 5: BRANDING & DIFERENCIAÇÃO
+    // 3. CENÁRIO DE MERCADO REGIONAL
+    {
+        id: 3,
+        type: 'market-regional',
+        title: 'Cenário de Mercado',
+        subtitle: 'Paraíba e Rio Grande do Norte',
+        bullets: [
+            {
+                icon: '🗺️',
+                text: 'O Nordeste tem forte presença de food service e varejo alimentício, com alta demanda por logística refrigerada confiável.'
+            },
+            {
+                icon: '🏙️',
+                text: 'Em João Pessoa, Campina Grande e Natal, supermercados e atacarejos dependem vitalmente da distribuição B2B eficiente.'
+            },
+            {
+                icon: '📱',
+                text: 'A digitalização das compras corporativas (Instagram/WhatsApp) é o principal motor atual de aproximação com novos clientes.'
+            }
+        ]
+    },
+
+    // 4. O QUE JÁ FOI IMPLEMENTADO (DIVIDIDO POR FUNIL)
+    {
+        id: 4,
+        type: 'implemented-grouped',
+        title: 'Status: Implementação',
+        subtitle: 'Estrutura entregue e ativa em cada etapa do funil',
+        groups: [
+            {
+                title: 'TOPO (Atração)',
+                color: '#FF5252',
+                items: [
+                    'Link único de contato (Bio)',
+                    'Automação Instagram',
+                    'Página Facebook Integrada',
+                    'Google My Business Otimizado',
+                    'Canal YouTube Institucional'
+                ]
+            },
+            {
+                title: 'MEIO (Conversão)',
+                color: '#D32F2F',
+                items: [
+                    'Gerenciador de Anúncios Setup',
+                    'Campanhas de Tráfego Teste',
+                    'Estrutura de E-mail Marketing'
+                ]
+            },
+            {
+                title: 'FUNDO (Vendas)',
+                color: '#B71C1C',
+                items: [
+                    'WhatsApp Comercial Definido',
+                    'Atendimento Centralizado (Camila)',
+                    'Fluxo de Resposta Padronizado'
+                ]
+            }
+        ]
+    },
+
+    // 5. ESTRUTURA ATUAL DO FUNIL
     {
         id: 5,
+        type: 'funnel-modern',
+        title: 'Fluxo de Aquisição Ativo',
+        subtitle: 'Caminho do cliente: Do anúncio ao fechamento',
+        stages: [
+            {
+                name: 'ORIGEM',
+                label: 'Instagram & Anúncios',
+                color: '#FF5252',
+                items: ['Anúncios Segmentados', 'Conteúdo Orgânico', 'Busca Google']
+            },
+            {
+                name: 'CONEXÃO',
+                label: 'WhatsApp & Link Bio',
+                color: '#D32F2F',
+                items: ['Automação de Boas-vindas', 'Direcionamento Rápido', 'Filtro de Interesse']
+            },
+            {
+                name: 'CONVERSÃO',
+                label: 'Time Comercial',
+                color: '#B71C1C',
+                items: ['Atendimento Humano', 'Negociação', 'Fechamento de Pedido']
+            }
+        ]
+    },
+
+    // 6. PRÓXIMOS PASSOS (ROADMAP TÁTICO)
+    {
+        id: 6,
+        type: 'roadmap-layered',
+        title: 'Plano de Ação Tático',
+        subtitle: 'Próximas ações de otimização e escala',
+        layers: [
+            {
+                category: 'ATRAÇÃO',
+                icon: '📢',
+                actions: ['Stories diários ativos', '3–6 posts semanais no feed', 'Verticais: Produtos, Logística, Bastidores', 'Networking em eventos A&B']
+            },
+            {
+                category: 'CONVERSÃO',
+                icon: '⚡',
+                actions: ['Campanhas de tráfego contínuo (Ads)', 'Geração de leads B2B qualificados', 'Remarketing para base inativa']
+            },
+            {
+                category: 'VENDAS',
+                icon: '💰',
+                actions: ['Otimização do WhatsApp Comercial', 'Scripts de atendimento e follow-up', 'Treinamento de CRM']
+            }
+        ]
+    },
+
+    // 7. MASCOTE DA MARCA
+    {
+        id: 7,
         type: 'mascot-concept',
-        title: 'Estratégia de Humanização',
-        subtitle: 'Novo ativo de marca para conexão com varejistas e clientes finais',
-        concept: 'Criação de um personagem proprietário para gerar identificação rápida, facilitar a comunicação de ofertas e aumentar a lembrança de marca nos PDVs.',
+        title: 'Estratégia de Branding',
+        subtitle: 'Mascote como facilitador de comunicação no PDV',
+        concept: 'Personagem proprietário para humanizar a logística, destacar produtos no PDV e criar identificação rápida com o varejista regional.',
         applications: [
             {
                 icon: '📱',
-                name: 'Digital',
-                desc: 'Mascote virtual para atendimento e redes sociais'
-            },
-            {
-                icon: '🛒',
-                name: 'PDV',
-                desc: 'Displays, wobblers e materiais de merchandising'
+                name: 'Redes Sociais',
+                desc: 'Porta-voz de ofertas e dicas'
             },
             {
                 icon: '👕',
-                name: 'Uniformização',
-                desc: 'Estampas para equipe de vendas e logística'
+                name: 'Endomarketing',
+                desc: 'Engajamento da equipe interna'
+            },
+            {
+                icon: '🏷️',
+                name: 'Materiais PDV',
+                desc: 'Wobblers e cartazes promocionais'
             },
             {
                 icon: '🚚',
                 name: 'Frota',
-                desc: 'Adesivação de caminhões e veículos'
+                desc: 'Identidade visual móvel'
             }
         ]
     },
 
-    // SLIDE 6: PRÓXIMOS PASSOS (ROADMAP)
+    // 8. ENCERRAMENTO
     {
-        id: 6,
-        type: 'roadmap-timeline',
-        title: 'Roadmap Estratégico: Q2',
-        subtitle: 'Próximas fases de execução e escala',
-        phases: [
-            {
-                phase: 'MÊS 1',
-                title: 'Tração Inicial',
-                tasks: ['Início das campanhas de tráfego pago', 'Ativação da base de leads frios', 'Treinamento de CRM para equipe']
-            },
-            {
-                phase: 'MÊS 2',
-                title: 'Otimização',
-                tasks: ['Refinamento de públicos (Ads)', 'Ajuste de roteiros de vendas', 'Início de ações de Inbound']
-            },
-            {
-                phase: 'MÊS 3',
-                title: 'Escala',
-                tasks: ['Aumento de investimento em mídia', 'Expansão para novas regiões', 'Implementação de Dashboards de BI']
-            },
-            {
-                phase: 'MÊS 4+',
-                title: 'Consolidação',
-                tasks: ['Automação de marketing completa', 'Programa de fidelidade', 'Novos canais de venda']
-            }
-        ]
-    },
-
-    // SLIDE 7: ENCERRAMENTO
-    {
-        id: 7,
+        id: 8,
         type: 'closing',
-        headline: 'Validação do Planejamento',
-        tagline: 'Estamos prontos para iniciar a fase de escala.',
-        cta: 'Aprovar Próximos Passos',
+        headline: 'Prontos para Escalar',
+        tagline: 'Estratégia desenhada. Estrutura pronta. Foco em execução.',
+        cta: 'SHARKS COMPANY & PB/RN FOODS',
         logos: ['/logo-pbrnfoods.png', '/logo-sharks.png']
     }
 ];

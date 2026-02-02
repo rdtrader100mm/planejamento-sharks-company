@@ -342,7 +342,8 @@
 }
 
 .hero-logo {
-    height: 70px;
+    height: 150px;
+    /* Much larger as requested */
     object-fit: contain;
     filter: drop-shadow(0 4px 25px rgba(0, 0, 0, 0.4));
     animation: logoFloat 5s ease-in-out infinite;
@@ -418,87 +419,127 @@
 }
 
 /* ============================================
-   DIAGNOSIS SLIDE
+   PROJECT OBJECTIVES SLIDE
    ============================================ */
-.slide-diagnosis {
+.slide-objectives {
     background: var(--brand-white);
 }
 
-.diagnosis-comparison {
-    display: flex;
-    align-items: stretch;
-    justify-content: center;
-    gap: 40px;
+.objectives-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
     padding: 20px 50px 40px;
+}
+
+.objective-card {
+    background: #FFFFFF;
+    /* Pure white for better contrast against off-white bg */
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    /* Stronger border */
+    border-radius: 12px;
+    padding: 24px 20px;
+    text-align: center;
+    transition: all var(--transition-normal);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    /* Added base shadow */
+}
+
+.objective-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    border-color: var(--brand-red-light);
+}
+
+.objective-icon {
+    font-size: 2.8rem;
+    /* Larger icon */
+    margin-bottom: 14px;
+    display: block;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.objective-title {
+    font-size: 1.25rem;
+    /* Larger title */
+    font-weight: 800;
+    /* Bolder */
+    color: #111;
+    /* Almost black */
+    margin-bottom: 10px;
+}
+
+.objective-desc {
+    font-size: 1rem;
+    color: #444;
+    /* Darker gray for readability */
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+/* ============================================
+   REGIONAL MARKET SLIDE
+   ============================================ */
+.slide-market-regional {
+    background: linear-gradient(135deg, #F5F7FA 0%, #FFFFFF 100%);
+}
+
+.regional-content {
+    padding: 20px 50px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex: 1;
 }
 
-.diagnosis-column {
-    flex: 1;
-    max-width: 380px;
-    padding: 25px;
-    border-radius: 16px;
+.regional-bullets {
     display: flex;
     flex-direction: column;
+    gap: 24px;
+    max-width: 900px;
 }
 
-.diagnosis-column.before {
-    background: linear-gradient(145deg, #FFF5F5 0%, #FFEBEE 100%);
-    border: 2px solid rgba(211, 47, 47, 0.15);
-}
-
-.diagnosis-column.after {
-    background: linear-gradient(145deg, #F0FFF4 0%, #E8F5E9 100%);
-    border: 2px solid rgba(76, 175, 80, 0.25);
-}
-
-.column-header {
+.regional-item {
     display: flex;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 18px;
-    padding-bottom: 14px;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+    gap: 24px;
+    background: white;
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-normal);
+    border-left: 5px solid var(--brand-red);
 }
 
-.column-icon {
-    font-size: 1.3rem;
+.regional-item:hover {
+    transform: translateX(10px);
+    box-shadow: var(--shadow-md);
 }
 
-.column-label {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: #333;
-}
-
-.diagnosis-list {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    flex: 1;
-}
-
-.diagnosis-list li {
-    font-size: 0.95rem;
-    color: #444;
-    padding-left: 18px;
-    position: relative;
-    line-height: 1.4;
-}
-
-.diagnosis-list li::before {
-    content: '•';
-    position: absolute;
-    left: 0;
-    color: var(--brand-gray-light);
-    font-weight: bold;
-}
-
-.diagnosis-arrow {
+.regional-icon-wrapper {
+    width: 60px;
+    height: 60px;
+    background: rgba(211, 47, 47, 0.08);
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+}
+
+.regional-icon {
+    font-size: 2.2rem;
+    color: var(--brand-red);
+}
+
+.regional-text {
+    font-size: 1.25rem;
+    /* Larger text */
+    color: #222;
+    /* Darker text */
+    line-height: 1.6;
+    font-weight: 600;
+    /* Bolder */
 }
 
 /* ============================================
@@ -1312,9 +1353,161 @@
 }
 
 /* ============================================
+   GROUPED IMPLEMENTED SLIDE
+   ============================================ */
+/* ============================================
+   GROUPED IMPLEMENTED SLIDE
+   ============================================ */
+.slide-implemented-grouped {
+    background: white;
+}
+
+.grouped-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding: 20px 50px 40px;
+}
+
+.group-col {
+    background: #F9FAFB;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.03);
+    /* Better shadow */
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.group-title {
+    font-size: 1.15rem;
+    /* Larger title */
+    font-weight: 800;
+    /* Bolder */
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.06);
+    /* Visible line */
+    padding-bottom: 12px;
+}
+
+.group-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.group-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #FFFFFF;
+    /* White against grey bg */
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    /* Visible border */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.check-icon {
+    color: var(--brand-success);
+    font-weight: 900;
+    font-size: 1.1rem;
+}
+
+.item-text {
+    font-size: 0.95rem;
+    /* Larger text */
+    color: #222;
+    /* Darker text */
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+/* ============================================
+   LAYERED ROADMAP SLIDE
+   ============================================ */
+/* ============================================
+   LAYERED ROADMAP SLIDE
+   ============================================ */
+.slide-roadmap-layered {
+    background: white;
+}
+
+.roadmap-layers {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* Increased gap */
+    padding: 20px 50px 40px;
+}
+
+.roadmap-layer {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    background: #F4F6F8;
+    /* Distinct background */
+    padding: 24px;
+    border-radius: 16px;
+    border-left: 6px solid var(--brand-red);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
+}
+
+.layer-header {
+    min-width: 220px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-right: 2px solid rgba(0, 0, 0, 0.08);
+    /* Visible separator */
+    padding-right: 24px;
+}
+
+.layer-icon {
+    font-size: 2.2rem;
+}
+
+.layer-name {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #111;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.layer-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.action-tag {
+    background: white;
+    padding: 10px 18px;
+    border-radius: 30px;
+    font-size: 0.95rem;
+    color: #333;
+    font-weight: 600;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    /* Stronger border */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    /* Visible shadow */
+}
+
+/* ============================================
    RESPONSIVE - TABLET & SMALLER SCREENS
    ============================================ */
 @media (max-width: 1200px) {
+    .grouped-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .objectives-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .slide-wrapper {
         width: 96%;
         height: 92%;
@@ -1496,4 +1689,101 @@
         left: -11px;
         margin: 0;
     }
+}
+
+/* ============================================
+   EXTRA RESPONSIVE RULES FOR NEW COMPONENTS
+   ============================================ */
+@media (max-width: 900px) {
+
+    .objectives-grid,
+    .grouped-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .roadmap-layer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .layer-header {
+        border-right: none;
+        padding-right: 0;
+        width: 100%;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        padding-bottom: 8px;
+    }
+
+    .regional-icon-wrapper {
+        width: 50px;
+        height: 50px;
+    }
+
+    .regional-item {
+        padding: 16px;
+        gap: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .slide-objectives .section-desc,
+    .slide-market-regional .regional-content,
+    .slide-implemented-grouped .grouped-grid,
+    .slide-roadmap-layered .roadmap-layers {
+        padding: 20px !important;
+    }
+}
+
+/* ============================================
+   EXTRA RESPONSIVE RULES FOR NEW COMPONENTS
+   ============================================ */
+@media (max-width: 900px) {
+
+    .objectives-grid,
+    .grouped-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .roadmap-layer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .layer-header {
+        border-right: none;
+        padding-right: 0;
+        width: 100%;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        padding-bottom: 8px;
+    }
+
+    .regional-icon-wrapper {
+        width: 50px;
+        height: 50px;
+    }
+
+    .regional-item {
+        padding: 16px;
+        gap: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .slide-objectives .section-desc,
+    .slide-market-regional .regional-content,
+    .slide-implemented-grouped .grouped-grid,
+    .slide-roadmap-layered .roadmap-layers {
+        padding: 20px !important;
+    }
+}
+/* SAFEGUARD FOR TEXT WRAPPING */
+.objective-title, .objective-desc, .item-text, .regional-text, .layer-name, .group-title {
+    white-space: normal !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    max-width: 100%;
 }
