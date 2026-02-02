@@ -74,7 +74,7 @@ export const slides = [
                 title: 'TOPO (Atração)',
                 color: '#FF5252',
                 items: [
-                    'Link único de contato (Bio)',
+                    'Bio Estratégica & Link Único',
                     'Automação Instagram',
                     'Página Facebook Integrada',
                     'Google My Business Otimizado',

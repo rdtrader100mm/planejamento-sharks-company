@@ -1893,3 +1893,145 @@
     .funnel-detail-card { height: auto !important; padding: 20px !important; }
 }
 
+
+/* ============================================
+   LAYOUT & NAVIGATION SAFEGUARDS
+   ============================================ */
+
+/* 1. Prevent Navigation Overlap */
+.objectives-grid,
+.regional-content,
+.grouped-grid,
+.funnel-visual-container,
+.roadmap-layers,
+.mascot-content,
+.slide-content,
+.implemented-grid,
+.diagnosis-comparison {
+    padding-bottom: 140px !important; /* Extra space at bottom for nav bar */
+    overflow-y: auto !important; /* Allow internal scrolling if content is tall */
+    max-height: 100vh; /* Use full height available */
+    box-sizing: border-box;
+    display: flex; /* Flex helps distribute space better in some cases */
+}
+
+/* Restore grid display where needed (overridden by flex above) */
+.objectives-grid, .grouped-grid, .implemented-grid {
+    display: grid !important;
+}
+
+/* 2. Prevent Card Cutoff & Text Breaks */
+.objective-card, 
+.group-col, 
+.roadmap-layer, 
+.regional-item,
+.funnel-detail-card {
+    height: auto !important; /* Allow growing to fit text */
+    min-height: min-content;
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+/* 3. Ensure Text Rendering */
+p, h1, h2, h3, h4, span, li, div {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+/* 4. Fix specific layouts */
+.regional-content {
+    align-items: flex-start !important; /* Align top to prevent center clipping */
+    overflow-y: auto !important;
+}
+
+.mascot-content {
+    align-items: center !important;
+    overflow-y: visible !important; /* Allow popouts if needed, or auto */
+}
+
+/* 5. Navigation Z-Index Safety */
+.nav-bar {
+    z-index: 9999 !important;
+    pointer-events: none; /* Let clicks pass through empty areas */
+}
+
+.nav-controls, .nav-dots {
+    pointer-events: auto; /* Re-enable clicks on buttons */
+}
+
+
+/* FUNNEL ALIGNMENT & CLEAN OVERRIDES */
+.funnel-visual-container {
+    align-items: flex-start !important; 
+    gap: 40px !important;
+}
+.funnel-shape {
+    gap: 20px !important; 
+    padding-top: 0 !important;
+}
+.funnel-level {
+    margin: 0 !important;
+    height: 120px !important; 
+}
+.funnel-detail-card {
+    height: 120px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    margin-bottom: 0 !important; /* Controlled by flex gap */
+}
+.funnel-details {
+    gap: 20px !important;
+}
+.funnel-stage-name {
+    text-shadow: none !important;
+    font-weight: 700 !important;
+    letter-spacing: 1px !important;
+}
+
+
+/* FUNNEL TEXT SIZE REDUCTION - NO CUTOFF */
+.funnel-stage-name {
+    font-size: 0.9rem !important; /* Reduzido para caber */
+    line-height: 1.2 !important;
+    margin-bottom: 4px !important;
+    width: 100% !important;
+    overflow: visible !important;
+}
+.funnel-stage-label {
+    font-size: 0.65rem !important; /* Reduzido */
+    letter-spacing: 0.5px !important;
+    white-space: normal !important; /* Permite quebra de linha se necessário */
+    padding: 0 10px !important;
+    line-height: 1.2 !important;
+    width: 100% !important;
+}
+
+
+/* MOBILE RESPONSIVE FIXES (Force overrides) */
+@media (max-width: 900px) {
+    .funnel-visual-container {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 30px !important;
+        padding: 20px !important;
+    }
+    .funnel-shape {
+        width: 100% !important;
+        align-items: center !important;
+        transform: scale(0.9); 
+    }
+    .funnel-details {
+        width: 100% !important;
+    }
+    .funnel-detail-card {
+        height: auto !important; /* Deixa altura livre no mobile */
+        min-height: 100px !important;
+        padding: 20px !important;
+    }
+    .funnel-level {
+        width: 100% !important;
+        max-width: 320px !important; 
+    }
+}
+
