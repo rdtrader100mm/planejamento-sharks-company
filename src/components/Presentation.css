@@ -1787,3 +1787,109 @@
     overflow-wrap: break-word !important;
     max-width: 100%;
 }
+
+/* ANIMATION OVERRIDES FOR IMPLEMENTATION SLIDE */
+.group-col {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    cursor: pointer !important;
+}
+.group-col:hover {
+    transform: translateY(-8px) scale(1.02) !important;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1) !important;
+    z-index: 2 !important;
+    background: white !important;
+    border-color: var(--brand-red-light) !important;
+}
+.group-col:hover .group-title {
+    color: var(--brand-red) !important;
+    letter-spacing: 1px !important;
+    transition: all 0.3s ease !important;
+}
+.group-item {
+    transition: all 0.2s ease !important;
+}
+.group-item:hover {
+    transform: translateX(6px) scale(1.02) !important;
+    background: #FFF5F5 !important;
+    border-color: var(--brand-red) !important;
+    box-shadow: 0 4px 12px rgba(211, 47, 47, 0.15) !important;
+}
+.group-item:hover .check-icon {
+    transform: scale(1.2) rotate(360deg) !important;
+    transition: transform 0.4s ease !important;
+}
+
+
+/* FUNNEL ALIGNMENT OVERRIDES */
+.funnel-visual-container {
+    display: grid !important;
+    grid-template-columns: auto 1fr !important;
+    gap: 80px !important;
+    align-items: start !important;
+    justify-content: center !important;
+}
+
+.funnel-shape {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0 !important; /* Managed by margin */
+    flex: none !important;
+}
+
+.funnel-level {
+    height: 120px !important;
+    margin-bottom: 30px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: relative !important;
+}
+
+/* Connectors */
+.funnel-level::after {
+    content: '';
+    position: absolute;
+    right: -80px;
+    top: 50%;
+    width: 80px;
+    height: 2px;
+    background: repeating-linear-gradient(90deg, rgba(255,255,255,0.3) 0, rgba(255,255,255,0.3) 5px, transparent 5px, transparent 10px);
+    z-index: 0;
+}
+
+.funnel-details {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 30px !important; /* Matches funnel level margin */
+    justify-content: flex-start !important;
+}
+
+.funnel-detail-card {
+    height: 120px !important; /* Matches Funnel Level Height */
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    margin: 0 !important;
+    padding: 0 30px !important;
+}
+
+.funnel-level-1 { width: 340px !important; }
+.funnel-level-2 { width: 260px !important; margin-top: 0 !important; }
+.funnel-level-3 { width: 180px !important; margin-top: 0 !important; }
+
+/* Text adjustments inside funnel */
+.funnel-stage-name { font-size: 1.4rem !important; margin-bottom: 5px !important; }
+.funnel-stage-label { font-size: 0.9rem !important; background: rgba(0,0,0,0.3); padding: 5px 10px; border-radius: 20px; }
+
+/* Mobile Reset */
+@media (max-width: 900px) {
+    .funnel-visual-container {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 30px !important;
+    }
+    .funnel-level::after { display: none !important; }
+    .funnel-level { margin-bottom: 0 !important; height: auto !important; padding: 20px 0 !important;}
+    .funnel-detail-card { height: auto !important; padding: 20px !important; }
+}
+
