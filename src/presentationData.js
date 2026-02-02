@@ -1,156 +1,150 @@
+// Dados do RELATÓRIO EXECUTIVO DE MARKETING
+// Foco: Execução, Entregas e Próximos Passos
+
 export const slides = [
-  // 1. ABERTURA – POSICIONAMENTO
-  {
-    id: 1,
-    type: 'hero',
-    headline: 'Planejamento Estratégico de Marketing e Crescimento Comercial',
-    tagline: 'Distribuição de Alimentos | Logística Refrigerada | PB & RN',
-    logos: ['/logo-pbrnfoods.png', '/logo-sharks.png']
-  },
-  // 2. SOBRE O GRUPO (PB & RN FOODS)
-  {
-    id: 2,
-    type: 'about',
-    title: 'Sobre o Grupo PB & RN Foods',
-    description: 'Referência em distribuição de alimentos refrigerados na Paraíba e Rio Grande do Norte, com foco em Food Service, varejo e atacado.',
-    stats: [
-      { value: '10+', label: 'Anos de Experiência' },
-      { value: '2', label: 'Estados Atendidos' },
-      { value: '500+', label: 'Clientes Ativos' },
-      { value: '100%', label: 'Logística Refrigerada' }
-    ],
-    differentials: [
-      { icon: '🚛', text: 'Frota própria refrigerada' },
-      { icon: '⚡', text: 'Agilidade no fornecimento' },
-      { icon: '🔄', text: 'Entregas recorrentes' },
-      { icon: '🎯', text: 'Foco no cliente B2B' }
-    ]
-  },
-  // 3. CENÁRIO DE MERCADO (OPORTUNIDADE)
-  {
-    id: 3,
-    type: 'market',
-    title: 'Cenário de Mercado',
-    subtitle: 'Por que investir em marketing agora?',
-    opportunities: [
-      { number: '+35%', text: 'Crescimento do Food Service no Nordeste' },
-      { number: '+60%', text: 'Aumento na busca por distribuidores online' },
-      { number: '4x', text: 'Mais leads gerados com presença digital' },
-      { number: '80%', text: 'Dos compradores B2B pesquisam online' }
-    ]
-  },
-  // 4. DIAGNÓSTICO INICIAL
-  {
-    id: 4,
-    type: 'diagnosis',
-    title: 'Diagnóstico Inicial',
-    subtitle: 'De onde partimos',
-    before: [
-      'Baixa presença digital',
-      'Canais desconectados',
-      'Poucas ações de atração de leads',
-      'Dependência de vendas reativas'
-    ],
-    after: [
-      'Estrutura digital profissional',
-      'Canais integrados e alinhados',
-      'Funil de marketing ativo',
-      'Vendas proativas e escaláveis'
-    ]
-  },
-  // 5. ESTRUTURAÇÃO DO FUNIL DE MARKETING
-  {
-    id: 5,
-    type: 'funnel-modern',
-    title: 'Funil de Marketing',
-    subtitle: 'Estratégia de captação e conversão',
-    stages: [
-      {
-        name: 'TOPO',
-        label: 'Atração',
-        color: '#FF5252',
-        items: ['Linktree', 'Instagram', 'Facebook', 'Google Negócios', 'YouTube']
-      },
-      {
-        name: 'MEIO',
-        label: 'Conversão',
-        color: '#D32F2F',
-        items: ['Tráfego Pago', 'Anúncios Segmentados', 'E-mail Marketing', 'Captura de Leads']
-      },
-      {
-        name: 'FUNDO',
-        label: 'Vendas',
-        color: '#B71C1C',
-        items: ['WhatsApp Comercial', 'Atendimento Rápido', 'Fechamento Consultivo']
-      }
-    ]
-  },
-  // 6. O QUE JÁ FOI IMPLEMENTADO
-  {
-    id: 6,
-    type: 'implemented',
-    title: 'O que já foi implementado',
-    subtitle: 'Progresso real e ações executadas',
-    items: [
-      { status: 'done', text: 'Revisão completa da identidade visual' },
-      { status: 'done', text: 'Mapeamento do público-alvo (ICP)' },
-      { status: 'done', text: 'Criação de perfis nas redes sociais' },
-      { status: 'done', text: 'Configuração do Google Meu Negócio' },
-      { status: 'done', text: 'Linktree institucional configurado' },
-      { status: 'done', text: 'Automações de WhatsApp ativas' },
-      { status: 'done', text: 'Estrutura pronta para tráfego pago' },
-      { status: 'done', text: 'Materiais de apoio para vendas' }
-    ]
-  },
-  // 7. PRÓXIMOS PASSOS ESTRATÉGICOS
-  {
-    id: 7,
-    type: 'roadmap-timeline',
-    title: 'Próximos Passos',
-    subtitle: 'Roadmap de crescimento',
-    phases: [
-      { phase: 'Q1 2026', title: 'Consolidação Digital', tasks: ['Mais publicações (feed + stories)', 'Calendário editorial ativo', 'Primeiras campanhas pagas'] },
-      { phase: 'Q2 2026', title: 'Expansão & Tráfego', tasks: ['Campanhas de alto impacto', 'Conteúdos audiovisuais', 'Parcerias estratégicas'] },
-      { phase: 'Q3 2026', title: 'Autoridade & Eventos', tasks: ['Participação em eventos do setor', 'Cases de sucesso', 'Fortalecimento da marca'] },
-      { phase: 'Q4 2026', title: 'Escala Regional', tasks: ['Expansão para novos municípios', 'Automação de vendas completa', 'Liderança regional consolidada'] }
-    ]
-  },
-  // 8. MASCOTE DA MARCA
-  {
-    id: 8,
-    type: 'mascot-concept',
-    title: 'Mascote da Marca',
-    subtitle: 'Humanização e diferenciação',
-    concept: 'Um personagem que representa a energia nordestina, confiança e proximidade com o cliente.',
-    applications: [
-      { icon: '📱', name: 'Redes Sociais', desc: 'Posts, stories e reels' },
-      { icon: '🎬', name: 'Vídeos', desc: 'Conteúdo institucional' },
-      { icon: '🎪', name: 'Eventos', desc: 'Ativações e feiras' },
-      { icon: '🚛', name: 'Frota', desc: 'Adesivagem dos veículos' }
-    ]
-  },
-  // 9. SOLUÇÕES DA SHARKS COMPANY
-  {
-    id: 9,
-    type: 'solutions',
-    title: 'Soluções Sharks Company',
-    subtitle: 'Seu parceiro estratégico em marketing',
-    services: [
-      { icon: '📊', name: 'Gestão de Mídias Sociais', desc: 'Planejamento, criação e publicação' },
-      { icon: '🎯', name: 'Tráfego Pago', desc: 'Google Ads, Meta Ads, remarketing' },
-      { icon: '🎨', name: 'Design Gráfico', desc: 'Identidade visual e materiais' },
-      { icon: '📈', name: 'Estratégia Digital', desc: 'Planejamento e execução completa' },
-      { icon: '🎬', name: 'Produção Audiovisual', desc: 'Vídeos, fotos e conteúdo' },
-      { icon: '💼', name: 'Consultoria', desc: 'Mentoria e acompanhamento' }
-    ]
-  },
-  // 10. ENCERRAMENTO – CHAMADA FORTE
-  {
-    id: 10,
-    type: 'closing',
-    headline: 'Vamos escalar a presença do Grupo PB & RN Foods no Nordeste',
-    tagline: 'O futuro da distribuição de alimentos começa agora.',
-    cta: 'Juntos, somos mais fortes.',
-    logos: ['/logo-pbrnfoods.png', '/logo-sharks.png']
-  }
+    // SLIDE 1: CAPA EXECUTIVA
+    {
+        id: 1,
+        type: 'hero',
+        headline: 'Relatório Executivo de Marketing',
+        tagline: 'Status de Implementação & Planejamento Estratégico 2026',
+        logos: ['/logo-pbrnfoods.png', '/logo-sharks.png']
+    },
+
+    // SLIDE 2: DIAGNÓSTICO (ANTES VS DEPOIS)
+    {
+        id: 2,
+        type: 'diagnosis',
+        title: 'Evolução da Estrutura Comercial',
+        subtitle: 'Transformação do cenário operacional em ecossistema digital',
+        before: [
+            'Prospecção 100% manual e dependente de vendedores',
+            'Ausência de materiais de apoio padronizados',
+            'Baixa visibilidade da marca no digital',
+            'Controle de leads descentralizado'
+        ],
+        after: [
+            'Processo de captação digital estruturado',
+            'Kit de vendas e apresentação institucional prontos',
+            'Identidade visual modernizada e ativa',
+            'CRM e Funil de Vendas integrados'
+        ]
+    },
+
+    // SLIDE 3: O QUE JÁ FOI FEITO (ENTREGAS TANGÍVEIS)
+    {
+        id: 3,
+        type: 'implemented',
+        title: 'Status: Ações Concluídas',
+        subtitle: 'Entregas realizadas na fase de estruturação inicial',
+        items: [
+            { text: 'Diagnóstico Comercial Completo', status: 'done' },
+            { text: 'Definição de ICP (Perfil de Cliente Ideal)', status: 'done' },
+            { text: 'Criação da Nova Identidade Visual', status: 'done' },
+            { text: 'Desenvolvimento do Mascote da Marca', status: 'done' },
+            { text: 'Estruturação do CRM de Vendas', status: 'done' },
+            { text: 'Produção de Apresentação Institucional', status: 'done' },
+            { text: 'Setup de Redes Sociais (Instagram/LinkedIn)', status: 'done' },
+            { text: 'Definição da Política Comercial', status: 'done' }
+        ]
+    },
+
+    // SLIDE 4: ESTRUTURA ATIVA (FUNIL)
+    {
+        id: 4,
+        type: 'funnel-modern',
+        title: 'Máquina de Vendas Ativa',
+        subtitle: 'Estrutura atual de captação e conversão de clientes',
+        stages: [
+            {
+                name: 'ATRAÇÃO',
+                label: 'Tráfego & Prospecção',
+                color: '#FF5252',
+                items: ['Ads (Meta/Google)', 'Social Media', 'Prospecção Ativa']
+            },
+            {
+                name: 'NEGOCIAÇÃO',
+                label: 'Qualificação & Oferta',
+                color: '#D32F2F',
+                items: ['Qualificação (SDR)', 'Apresentação', 'Envio de Proposta']
+            },
+            {
+                name: 'FECHAMENTO',
+                label: 'Conversão & Onboarding',
+                color: '#B71C1C',
+                items: ['Assinatura', 'Onboarding', 'Pós-Venda']
+            }
+        ]
+    },
+
+    // SLIDE 5: BRANDING & DIFERENCIAÇÃO
+    {
+        id: 5,
+        type: 'mascot-concept',
+        title: 'Estratégia de Humanização',
+        subtitle: 'Novo ativo de marca para conexão com varejistas e clientes finais',
+        concept: 'Criação de um personagem proprietário para gerar identificação rápida, facilitar a comunicação de ofertas e aumentar a lembrança de marca nos PDVs.',
+        applications: [
+            {
+                icon: '📱',
+                name: 'Digital',
+                desc: 'Mascote virtual para atendimento e redes sociais'
+            },
+            {
+                icon: '🛒',
+                name: 'PDV',
+                desc: 'Displays, wobblers e materiais de merchandising'
+            },
+            {
+                icon: '👕',
+                name: 'Uniformização',
+                desc: 'Estampas para equipe de vendas e logística'
+            },
+            {
+                icon: '🚚',
+                name: 'Frota',
+                desc: 'Adesivação de caminhões e veículos'
+            }
+        ]
+    },
+
+    // SLIDE 6: PRÓXIMOS PASSOS (ROADMAP)
+    {
+        id: 6,
+        type: 'roadmap-timeline',
+        title: 'Roadmap Estratégico: Q2',
+        subtitle: 'Próximas fases de execução e escala',
+        phases: [
+            {
+                phase: 'MÊS 1',
+                title: 'Tração Inicial',
+                tasks: ['Início das campanhas de tráfego pago', 'Ativação da base de leads frios', 'Treinamento de CRM para equipe']
+            },
+            {
+                phase: 'MÊS 2',
+                title: 'Otimização',
+                tasks: ['Refinamento de públicos (Ads)', 'Ajuste de roteiros de vendas', 'Início de ações de Inbound']
+            },
+            {
+                phase: 'MÊS 3',
+                title: 'Escala',
+                tasks: ['Aumento de investimento em mídia', 'Expansão para novas regiões', 'Implementação de Dashboards de BI']
+            },
+            {
+                phase: 'MÊS 4+',
+                title: 'Consolidação',
+                tasks: ['Automação de marketing completa', 'Programa de fidelidade', 'Novos canais de venda']
+            }
+        ]
+    },
+
+    // SLIDE 7: ENCERRAMENTO
+    {
+        id: 7,
+        type: 'closing',
+        headline: 'Validação do Planejamento',
+        tagline: 'Estamos prontos para iniciar a fase de escala.',
+        cta: 'Aprovar Próximos Passos',
+        logos: ['/logo-pbrnfoods.png', '/logo-sharks.png']
+    }
 ];

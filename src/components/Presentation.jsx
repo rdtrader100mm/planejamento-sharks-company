@@ -128,52 +128,6 @@ const renderSlideContent = (slide) => {
                 </div>
             );
 
-        case 'about':
-            return (
-                <div className="slide slide-about">
-                    <div className="slide-header">
-                        <h2 className="section-title">{slide.title}</h2>
-                        <p className="section-desc">{slide.description}</p>
-                    </div>
-                    <div className="about-content">
-                        <div className="stats-grid">
-                            {slide.stats.map((stat, idx) => (
-                                <div key={idx} className="stat-card">
-                                    <span className="stat-value">{stat.value}</span>
-                                    <span className="stat-label">{stat.label}</span>
-                                </div>
-                            ))}
-                        </div>
-                        <div className="differentials-grid">
-                            {slide.differentials.map((diff, idx) => (
-                                <div key={idx} className="differential-item">
-                                    <span className="diff-icon">{diff.icon}</span>
-                                    <span className="diff-text">{diff.text}</span>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            );
-
-        case 'market':
-            return (
-                <div className="slide slide-market">
-                    <div className="slide-header">
-                        <h2 className="section-title">{slide.title}</h2>
-                        <p className="section-subtitle">{slide.subtitle}</p>
-                    </div>
-                    <div className="market-grid">
-                        {slide.opportunities.map((opp, idx) => (
-                            <div key={idx} className="market-card">
-                                <span className="market-number">{opp.number}</span>
-                                <span className="market-text">{opp.text}</span>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            );
-
         case 'diagnosis':
             return (
                 <div className="slide slide-diagnosis">
