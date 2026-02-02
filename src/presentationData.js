@@ -1,107 +1,156 @@
 export const slides = [
+  // 1. ABERTURA – POSICIONAMENTO
   {
     id: 1,
-    type: 'cover',
-    title: 'Planejamento Estratégico & Expansão',
-    subtitle: 'Marketing, Posicionamento e Vendas 2026',
-    brand: 'Grupo PB & RN Foods Distribuidora'
+    type: 'hero',
+    headline: 'Planejamento Estratégico de Marketing e Crescimento Comercial',
+    tagline: 'Distribuição de Alimentos | Logística Refrigerada | PB & RN',
+    logos: ['/logo-pbrnfoods.png', '/logo-sharks.png']
   },
+  // 2. SOBRE O GRUPO (PB & RN FOODS)
   {
     id: 2,
-    type: 'content',
-    title: 'Visão Geral',
-    layout: 'split',
-    content: 'O Grupo PB & RN Foods se posiciona para liderar a distribuição de alimentos com logística refrigerada no Nordeste.',
-    points: [
-      'Referência em distribuição na Paraíba e Rio Grande do Norte',
-      'Estrutura logística moderna e eficiente',
-      'Foco total na qualidade do serviço e satisfação do cliente',
-      'Visão de expansão agressiva para os próximos trimestres'
+    type: 'about',
+    title: 'Sobre o Grupo PB & RN Foods',
+    description: 'Referência em distribuição de alimentos refrigerados na Paraíba e Rio Grande do Norte, com foco em Food Service, varejo e atacado.',
+    stats: [
+      { value: '10+', label: 'Anos de Experiência' },
+      { value: '2', label: 'Estados Atendidos' },
+      { value: '500+', label: 'Clientes Ativos' },
+      { value: '100%', label: 'Logística Refrigerada' }
+    ],
+    differentials: [
+      { icon: '🚛', text: 'Frota própria refrigerada' },
+      { icon: '⚡', text: 'Agilidade no fornecimento' },
+      { icon: '🔄', text: 'Entregas recorrentes' },
+      { icon: '🎯', text: 'Foco no cliente B2B' }
     ]
   },
+  // 3. CENÁRIO DE MERCADO (OPORTUNIDADE)
   {
     id: 3,
-    type: 'content',
-    title: 'Diagnóstico de Marketing',
-    layout: 'cards',
-    points: [
+    type: 'market',
+    title: 'Cenário de Mercado',
+    subtitle: 'Por que investir em marketing agora?',
+    opportunities: [
+      { number: '+35%', text: 'Crescimento do Food Service no Nordeste' },
+      { number: '+60%', text: 'Aumento na busca por distribuidores online' },
+      { number: '4x', text: 'Mais leads gerados com presença digital' },
+      { number: '80%', text: 'Dos compradores B2B pesquisam online' }
+    ]
+  },
+  // 4. DIAGNÓSTICO INICIAL
+  {
+    id: 4,
+    type: 'diagnosis',
+    title: 'Diagnóstico Inicial',
+    subtitle: 'De onde partimos',
+    before: [
+      'Baixa presença digital',
+      'Canais desconectados',
+      'Poucas ações de atração de leads',
+      'Dependência de vendas reativas'
+    ],
+    after: [
+      'Estrutura digital profissional',
+      'Canais integrados e alinhados',
+      'Funil de marketing ativo',
+      'Vendas proativas e escaláveis'
+    ]
+  },
+  // 5. ESTRUTURAÇÃO DO FUNIL DE MARKETING
+  {
+    id: 5,
+    type: 'funnel-modern',
+    title: 'Funil de Marketing',
+    subtitle: 'Estratégia de captação e conversão',
+    stages: [
       {
-        title: 'Cenário Atual',
-        desc: 'Marca sólida, mas com pouca presença digital estratégica. Necessidade de padronização visual.'
+        name: 'TOPO',
+        label: 'Atração',
+        color: '#FF5252',
+        items: ['Linktree', 'Instagram', 'Facebook', 'Google Negócios', 'YouTube']
       },
       {
-        title: 'Oportunidades',
-        desc: 'Explorar o digital para captação de leads qualificados e reforço de autoridade no setor.'
+        name: 'MEIO',
+        label: 'Conversão',
+        color: '#D32F2F',
+        items: ['Tráfego Pago', 'Anúncios Segmentados', 'E-mail Marketing', 'Captura de Leads']
       },
       {
-        title: 'Desafio',
-        desc: 'Alinhar a comunicação comercial com as ações de marketing para maximizar o ROI.'
+        name: 'FUNDO',
+        label: 'Vendas',
+        color: '#B71C1C',
+        items: ['WhatsApp Comercial', 'Atendimento Rápido', 'Fechamento Consultivo']
       }
     ]
   },
-  {
-    id: 4,
-    type: 'funnel',
-    title: 'Estrutura do Funil de Vendas',
-    subtitle: 'Do conhecimento à fidelização',
-    stages: [
-      { name: 'Topo (Atração)', desc: 'Redes Sociais, Google Ads, Branding', color: '#FF5252' },
-      { name: 'Meio (Consideração)', desc: 'Nutrição de Leads, Conteúdo Rico, WhatsApp', color: '#D32F2F' },
-      { name: 'Fundo (Decisão)', desc: 'Oferta Comercial, Negociação, Fechamento', color: '#B71C1C' }
-    ]
-  },
-  {
-    id: 5,
-    type: 'content',
-    title: 'Ações Já Implementadas',
-    layout: 'list',
-    points: [
-      '✅ Revisão completa da identidade visual institucional',
-      '✅ Mapeamento detalhado do público-alvo (ICP)',
-      '✅ Início da estruturação dos canais digitais',
-      '✅ Padronização de materiais de apoio para vendas'
-    ]
-  },
+  // 6. O QUE JÁ FOI IMPLEMENTADO
   {
     id: 6,
-    type: 'mascot',
-    title: 'Estratégia de Branding: O Mascote',
-    content: 'Humanizando a marca e criando conexões reais.',
-    details: [
-      'Gera identificação imediata com o público',
-      'Facilita a comunicação nas redes sociais',
-      'Torna a marca mais amigável e acessível',
-      'Diferencial competitivo visual'
+    type: 'implemented',
+    title: 'O que já foi implementado',
+    subtitle: 'Progresso real e ações executadas',
+    items: [
+      { status: 'done', text: 'Revisão completa da identidade visual' },
+      { status: 'done', text: 'Mapeamento do público-alvo (ICP)' },
+      { status: 'done', text: 'Criação de perfis nas redes sociais' },
+      { status: 'done', text: 'Configuração do Google Meu Negócio' },
+      { status: 'done', text: 'Linktree institucional configurado' },
+      { status: 'done', text: 'Automações de WhatsApp ativas' },
+      { status: 'done', text: 'Estrutura pronta para tráfego pago' },
+      { status: 'done', text: 'Materiais de apoio para vendas' }
     ]
   },
+  // 7. PRÓXIMOS PASSOS ESTRATÉGICOS
   {
     id: 7,
-    type: 'mascot-apps',
-    title: 'Aplicações do Mascote',
-    layout: 'grid',
-    items: [
-      { name: 'Redes Sociais', icon: '📱' },
-      { name: 'Adesivagem de Frota', icon: '🚛' },
-      { name: 'Fardamento', icon: '👕' },
-      { name: 'Eventos & Brindes', icon: '🎁' }
+    type: 'roadmap-timeline',
+    title: 'Próximos Passos',
+    subtitle: 'Roadmap de crescimento',
+    phases: [
+      { phase: 'Q1 2026', title: 'Consolidação Digital', tasks: ['Mais publicações (feed + stories)', 'Calendário editorial ativo', 'Primeiras campanhas pagas'] },
+      { phase: 'Q2 2026', title: 'Expansão & Tráfego', tasks: ['Campanhas de alto impacto', 'Conteúdos audiovisuais', 'Parcerias estratégicas'] },
+      { phase: 'Q3 2026', title: 'Autoridade & Eventos', tasks: ['Participação em eventos do setor', 'Cases de sucesso', 'Fortalecimento da marca'] },
+      { phase: 'Q4 2026', title: 'Escala Regional', tasks: ['Expansão para novos municípios', 'Automação de vendas completa', 'Liderança regional consolidada'] }
     ]
   },
+  // 8. MASCOTE DA MARCA
   {
     id: 8,
-    type: 'roadmap',
-    title: 'Estratégia de Crescimento & Roadmap',
-    steps: [
-      { phase: 'Fase 1', time: 'Imediato', task: 'Consolidação de Branding Digital & Ativos' },
-      { phase: 'Fase 2', time: 'Trimestre 1', task: 'Geração de Leads (Google Ads & Meta Ads)' },
-      { phase: 'Fase 3', time: 'Trimestre 2', task: 'CRM & Automação de Vendas (WhatsApp)' },
-      { phase: 'Fase 4', time: 'Contínuo', task: 'Monitoramento de KPIs & Expansão Nordeste' }
+    type: 'mascot-concept',
+    title: 'Mascote da Marca',
+    subtitle: 'Humanização e diferenciação',
+    concept: 'Um personagem que representa a energia nordestina, confiança e proximidade com o cliente.',
+    applications: [
+      { icon: '📱', name: 'Redes Sociais', desc: 'Posts, stories e reels' },
+      { icon: '🎬', name: 'Vídeos', desc: 'Conteúdo institucional' },
+      { icon: '🎪', name: 'Eventos', desc: 'Ativações e feiras' },
+      { icon: '🚛', name: 'Frota', desc: 'Adesivagem dos veículos' }
     ]
   },
+  // 9. SOLUÇÕES DA SHARKS COMPANY
   {
     id: 9,
-    type: 'cover',
-    title: 'Vamos Crescer Juntos',
-    subtitle: 'O futuro da distribuição começa hoje.',
-    brand: 'Grupo PB & RN Foods'
+    type: 'solutions',
+    title: 'Soluções Sharks Company',
+    subtitle: 'Seu parceiro estratégico em marketing',
+    services: [
+      { icon: '📊', name: 'Gestão de Mídias Sociais', desc: 'Planejamento, criação e publicação' },
+      { icon: '🎯', name: 'Tráfego Pago', desc: 'Google Ads, Meta Ads, remarketing' },
+      { icon: '🎨', name: 'Design Gráfico', desc: 'Identidade visual e materiais' },
+      { icon: '📈', name: 'Estratégia Digital', desc: 'Planejamento e execução completa' },
+      { icon: '🎬', name: 'Produção Audiovisual', desc: 'Vídeos, fotos e conteúdo' },
+      { icon: '💼', name: 'Consultoria', desc: 'Mentoria e acompanhamento' }
+    ]
+  },
+  // 10. ENCERRAMENTO – CHAMADA FORTE
+  {
+    id: 10,
+    type: 'closing',
+    headline: 'Vamos escalar a presença do Grupo PB & RN Foods no Nordeste',
+    tagline: 'O futuro da distribuição de alimentos começa agora.',
+    cta: 'Juntos, somos mais fortes.',
+    logos: ['/logo-pbrnfoods.png', '/logo-sharks.png']
   }
 ];

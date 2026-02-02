@@ -1,48 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
 :root {
-  --color-primary: #D32F2F; /* Red */
-  --color-secondary: #1A1A1A; /* Black */
-  --color-accent: #FF5252; /* Lighter Red */
-  --color-bg: #FFFFFF; /* White */
+  /* Brand Colors */
+  --color-primary: #D32F2F;
+  --color-primary-light: #FF5252;
+  --color-primary-dark: #B71C1C;
+
+  /* Neutrals */
+  --color-black: #0D0D0D;
+  --color-dark: #1A1A1A;
+  --color-gray-900: #2A2A2A;
+  --color-gray-700: #444444;
+  --color-gray-500: #666666;
+  --color-gray-400: #888888;
+  --color-gray-300: #AAAAAA;
+  --color-gray-200: #CCCCCC;
+  --color-gray-100: #EEEEEE;
+  --color-white: #FFFFFF;
+
+  /* Semantic */
+  --color-success: #4CAF50;
+  --color-warning: #FFC107;
+  --color-info: #2196F3;
+
+  /* Backgrounds */
+  --color-bg: #FFFFFF;
+  --color-bg-alt: #F8F9FA;
+  --color-bg-dark: #1A1A1A;
+
+  /* Text */
   --color-text: #333333;
   --color-text-light: #666666;
-  --color-bg-alt: #F8F9FA;
-  --font-main: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
-  --transition-speed: 0.3s;
+  --color-text-muted: #888888;
+
+  /* Typography */
+  --font-main: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.12);
+  --shadow-xl: 0 30px 80px rgba(0, 0, 0, 0.2);
+
+  /* Border Radius */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
 }
 
-* {
+/* Reset */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* Base */
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
 body {
   font-family: var(--font-main);
-  background-color: var(--color-bg);
+  background-color: var(--color-black);
   color: var(--color-text);
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  overflow: hidden; /* Prevent scrolling for slide effect */
+  line-height: 1.6;
+  overflow: hidden;
+  min-height: 100vh;
 }
 
-h1, h2, h3, h4, h5, h6 {
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 700;
   line-height: 1.2;
+  letter-spacing: -0.02em;
 }
 
-ul {
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.1rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+p {
+  line-height: 1.7;
+}
+
+/* Links */
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-primary-light);
+}
+
+/* Lists */
+ul,
+ol {
   list-style: none;
 }
 
+/* Buttons */
 button {
   font-family: inherit;
+  font-size: inherit;
   cursor: pointer;
   border: none;
   background: none;
+  outline: none;
+  transition: all var(--transition-normal);
 }
 
-/* Utilities */
-.text-primary { color: var(--color-primary); }
-.text-secondary { color: var(--color-secondary); }
-.bg-primary { background-color: var(--color-primary); }
-.bg-secondary { background-color: var(--color-secondary); }
+button:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Selection */
+::selection {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-gray-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-gray-400);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gray-500);
+}
+
+/* Utility Classes */
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-white {
+  color: var(--color-white);
+}
+
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.bg-dark {
+  background-color: var(--color-dark);
+}
+
+.bg-white {
+  background-color: var(--color-white);
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.font-normal {
+  font-weight: 400;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-extrabold {
+  font-weight: 800;
+}
+
+.font-black {
+  font-weight: 900;
+}
+
+/* Focus States for Accessibility */
+*:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+
+  .nav-bar,
+  .nav-controls {
+    display: none !important;
+  }
+}
